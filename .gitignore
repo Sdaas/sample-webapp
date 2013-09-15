@@ -1,2 +1,6 @@
+target
 
-
+# Stuff specific to IntelliJ. See following link on what to exclude
+# http://web.archive.org/web/20120629000805/http://devnet.jetbrains.net/docs/DOC-1186
+.idea/workspace.xml
+.idea/tasks.xml
