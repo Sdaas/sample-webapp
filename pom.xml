@@ -17,6 +17,8 @@
         <mockito.version>1.9.5</mockito.version>
         <jersey.version>1.17</jersey.version>
         <selenium.version>1.0.2</selenium.version>
+        <jmockit.version>1.4</jmockit.version>
+        <jmockit.coverage.version>0.999.22</jmockit.coverage.version>
     </properties>
 
     <dependencies>
@@ -56,6 +58,21 @@
             <scope>test</scope>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.googlecode.jmockit</groupId>
+            <artifactId>jmockit</artifactId>
+            <version>${jmockit.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.googlecode.jmockit</groupId>
+            <artifactId>jmockit-coverage</artifactId>
+            <version>${jmockit.coverage.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
     </dependencies>
 
 
@@ -77,11 +94,22 @@
             </plugin>
 
             <!-- For Unit Tests. See http://maven.apache.org/surefire/maven-surefire-plugin/ -->
+            <!-- Also see http://jmockit.googlecode.com/svn/trunk/www/tutorial/CodeCoverage.html#maven for code coverage -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.15</version>
                 <configuration>
+                    <systemProperties>
+                        <property>
+                            <name>jmockit-coverage-outputDir</name>
+                            <value>${project.build.directory}/my-coverage-report</value>
+                        </property>
+                        <property>
+                            <name>jmockit-coverage-output</name>
+                            <value>html-nocp</value>              <!-- set this to NONE to turn off coverage tests -->
+                        </property>
+                    </systemProperties>
                     <!-- By default  "**/Test*.java", "**/*Test.java" and "**/*TestCase.java" are include -->
                     <excludes>
                         <exclude>**/*IntegrationTest.java</exclude>

@@ -1,8 +1,20 @@
 
+What
+====
+
+A sample webapp
+
+* Jersey
+* Jetty Web server
+* Maven
+* TestNG for UnitTest
+* Selenium for Integration Tests
+* JMockit Coverage for Coverage Tests
+
 Steps
 ====
 
-To run unit tests and webapp
+To run unit tests (including code coverage ) and webapp
 
 * mvn package
 * mvn jetty:run
@@ -13,6 +25,8 @@ To run integration tests
 * make sure that popup blocker is disabled in Safari
 * mvn verify
 
+Unit Test results are available in target/surefire-reports/index.html
+Coverage results are available in target/my-coverage-report/index.html
 
 Tests
 =====

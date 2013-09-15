@@ -51,6 +51,8 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.yaml:snakeyaml:1.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.mockito:mockito-all:1.9.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.seleniumhq.selenium.client-drivers:selenium-java-client-driver:1.0.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.googlecode.jmockit:jmockit:1.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.googlecode.jmockit:jmockit-coverage:0.999.22" level="project" />
   </component>
 </module>
 
