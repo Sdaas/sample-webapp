@@ -5,12 +5,13 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-@Path("/hello")
+@Path("/")
 public class Hello{
 
     @GET
     @Produces(MediaType.TEXT_HTML)
     public String sayHello() {
-        return "Hello world";
+        System.out.println("sayHello called...");
+        return "Hello World";
     }
 }

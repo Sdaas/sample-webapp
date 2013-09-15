@@ -1,5 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <!-- See http://maven.apache.org/guides/introduction/introduction-to-the-pom.html -->
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.daasworld</groupId>         <!-- typically the company or org name -->
     <artifactId>sample-webapp</artifactId>   <!-- Application name -->
@@ -43,9 +46,47 @@
             <artifactId>mockito-all</artifactId>
             <version>${mockito.version}</version>
         </dependency>
-
     </dependencies>
+
+
+
+
     <build>
         <finalName>sample-webapp</finalName>
+        <plugins>
+
+            <!-- http://maven.apache.org/plugins/maven-compiler-plugin/usage.html -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.15</version>
+                <configuration>
+                    <!-- See http://maven.apache.org/surefire/maven-surefire-plugin/examples/inclusion-exclusion.html -->
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+
+            <!-- http://maven.apache.org/plugins/maven-war-plugin/examples/rapid-testing-jetty6-plugin.html -->
+            <!-- Note: We are using jetty 6.*. The latest version is 9.8, but that requires Java 1.7 -->
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <version>6.1.22</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <connectors>
+                        <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                            <port>9090</port>
+                            <maxIdleTime>60000</maxIdleTime>
+                        </connector>
+                    </connectors>
+                    <!-- without this line, we will need to accesss the app at /-the-artifact-id -->
+                    <contextPath>/</contextPath>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
+
 </project>

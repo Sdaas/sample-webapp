@@ -25,6 +25,9 @@
         <module name="sample-webapp" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sample-webapp" target="1.6" />
+    </bytecodeTargetLevel>
   </component>
 </project>
 

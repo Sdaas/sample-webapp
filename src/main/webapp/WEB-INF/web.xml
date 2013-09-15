@@ -13,7 +13,7 @@
         <servlet-name >HelloServlet</servlet-name >
         <servlet-class >com.sun.jersey.spi.container.servlet.ServletContainer </servlet-class >
         <init-param >
-            <param-name >com.sun.jersey.config.property.packages </param-name >
+            <param-name >com.sun.jersey.config.property.packages</param-name >
             <param-value >com.daasworld.webapp</param-value >
         </init-param >
         <load-on-startup >1 </load-on-startup >
@@ -22,7 +22,7 @@
     <!-- URL mapping for each servlet -->
     <servlet-mapping >
         <servlet-name >HelloServlet</servlet-name >
-        <url-pattern >/* </url-pattern >
+        <url-pattern >/*</url-pattern >
     </servlet-mapping >
 
 </web-app >

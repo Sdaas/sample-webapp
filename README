@@ -2,5 +2,6 @@
 Steps
 ====
 
-1. mvn archetype:generate -DgroupId=com.daasworld -DartifactId=sample-webapp -DarchetypeArtifactId=maven-archetype-webapp
-2. 
+* mvn package
+* mvn jetty:run
+* http://127.0.0.1:9090
