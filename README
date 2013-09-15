@@ -2,10 +2,24 @@
 Steps
 ====
 
+To run unit tests and webapp
+
 * mvn package
 * mvn jetty:run
-* curl http://127.0.0.1:9090
+* curl http://127.0.0.1:8080
 
+To run integration tests
+
+* make sure that popup blocker is disabled in Safari
+* mvn verify
+
+
+Tests
+=====
+
+All tests that use selenium ( integration tests ) must end with the **IntegrationTest.java. These
+files are configured in the pom to be excluded from unit tests ( by surefire plugin ) and included
+in integration tests ( by failsafe plugin )
 
 Tags
 ====
@@ -22,6 +36,5 @@ Go to Maven Projects tab, then expand Plugins/jetty, right-click jetty:run and s
 Stuff To Do
 ===========
 
-TODO Add sample Unit Test
 TODO Add coverage tests
 
