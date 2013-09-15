@@ -1,0 +1,6 @@
+
+Steps
+====
+
+1. mvn archetype:generate -DgroupId=com.daasworld -DartifactId=sample-webapp -DarchetypeArtifactId=maven-archetype-webapp
+2. 
