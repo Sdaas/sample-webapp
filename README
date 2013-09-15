@@ -5,3 +5,11 @@ Steps
 * mvn package
 * mvn jetty:run
 * http://127.0.0.1:9090
+
+
+Tags
+====
+
+Run the following command to see list of all the git tags
+
+git tag -n
