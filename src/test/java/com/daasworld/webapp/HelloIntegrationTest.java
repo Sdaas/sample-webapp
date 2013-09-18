@@ -28,9 +28,9 @@ public class HelloIntegrationTest {
     @Test
     public void testSequence() throws Exception {
         System.out.println("running testSequence...");
-        selenium.open("/");
+        selenium.open("/api/");
         selenium.waitForPageToLoad("30000");
-        Assert.assertTrue( selenium.isTextPresent("Hello World"), "string not present") ;
+        Assert.assertTrue( selenium.isTextPresent("Hello World from the servlet"), "string not present") ;
     }
 
 }

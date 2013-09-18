@@ -12,6 +12,6 @@ public class Hello{
     @Produces(MediaType.TEXT_HTML)
     public String sayHello() {
         System.out.println("sayHello called...");
-        return "Hello World";
+        return "Hello World from the servlet";
     }
 }
