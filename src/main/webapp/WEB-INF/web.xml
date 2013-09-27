@@ -22,7 +22,7 @@
     <!-- URL mapping for each servlet -->
     <servlet-mapping >
         <servlet-name >HelloServlet</servlet-name >
-        <url-pattern >/api</url-pattern >
+        <url-pattern >/api/hello</url-pattern >
     </servlet-mapping >
 
 </web-app >

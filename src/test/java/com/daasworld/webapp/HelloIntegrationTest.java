@@ -27,10 +27,24 @@ public class HelloIntegrationTest {
 
     @Test
     public void testSequence() throws Exception {
-        System.out.println("running testSequence...");
-        selenium.open("/api/");
+        selenium.open("/api/hello");
         selenium.waitForPageToLoad("30000");
+
+        String body = selenium.getBodyText();
+        System.out.println(body);
         Assert.assertTrue( selenium.isTextPresent("Hello World from the servlet"), "string not present") ;
     }
+
+    @Test
+    public void staticPageTest() throws Exception {
+        selenium.open("/static/test.html");
+        selenium.waitForPageToLoad("30000");
+
+        String body = selenium.getBodyText();
+        System.out.println(body);
+        Assert.assertTrue( selenium.isTextPresent("This is a Static web page"), "string not present") ;
+    }
+
+
 
 }

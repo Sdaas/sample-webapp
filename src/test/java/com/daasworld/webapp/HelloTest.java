@@ -14,6 +14,6 @@ public class HelloTest {
     public void testSayHello() throws Exception {
 
         Hello h = new Hello();
-        Assert.assertEquals( h.sayHello(), "Hello World", "got incorrect response");
+        Assert.assertEquals( h.sayHello(), "Hello World from the servlet", "got incorrect response");
     }
 }
