@@ -18,7 +18,7 @@ To run unit tests (including code coverage ) and webapp
 
 * mvn package
 * mvn jetty:run
-* curl http://127.0.0.1:8080/api   ( will point to servlet )
+* curl http://127.0.0.1:8080/api/hello   ( will point to servlet )
 * curl http://127.0.0.1:8080/static/test.html ( will point to static content )
 
 To run integration tests
