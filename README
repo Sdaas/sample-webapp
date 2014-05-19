@@ -20,6 +20,7 @@ To run unit tests (including code coverage ) and webapp
 * mvn jetty:run
 * curl http://127.0.0.1:8080/api/hello   ( will point to servlet )
 * curl http://127.0.0.1:8080/static/test.html ( will point to static content )
+* curl http://127.0.0.1:8080/api/api-docs  ( swagger )
 
 To run integration tests
 
@@ -48,7 +49,14 @@ Running and Debugging from inside IntelliJ
 
 Go to Maven Projects tab, then expand Plugins/jetty, right-click jetty:run and select Run /  Debug.
 
+Swagger
+=======
+
+* See https://github.com/wordnik/swagger-core/wiki/Java-JAXRS-Quickstart
+* Swagger-UI https://github.com/wordnik/swagger-ui
+
 Stuff To Do
 ===========
+
 
 
