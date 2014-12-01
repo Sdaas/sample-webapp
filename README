@@ -52,11 +52,12 @@ Go to Maven Projects tab, then expand Plugins/jetty, right-click jetty:run and s
 Swagger
 =======
 
-* See https://github.com/wordnik/swagger-core/wiki/Java-JAXRS-Quickstart
-* Swagger-UI https://github.com/wordnik/swagger-ui
+* QuickStart https://github.com/wordnik/swagger-core/wiki/Java-JAXRS-Quickstart
+* UI https://github.com/wordnik/swagger-ui
 
 Stuff To Do
 ===========
 
+- Make the swagger UI point to itself without requiring any manual configuration
 
 
